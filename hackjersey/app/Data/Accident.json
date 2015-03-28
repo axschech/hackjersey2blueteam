@@ -23,9 +23,11 @@
 			"surface":"",
 			"enviorment":""
 		},
-		"deaths": {
-			"killed":0,
-			"injured":0,
+		"casualties": {
+			"total": {
+				"killed":0,
+				"injured":0
+			},
 			"pedestrians": {
 				"killed":0,
 				"injured":0
