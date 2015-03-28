@@ -16,26 +16,28 @@
 				"streetname":"",
 				"city":"",
 				"state":"",
-				"zipcode":0
+				"zipcode": 0
 			}
 		},
 		"condition": {
-			"surface":"",
-			"enviorment":""
+			"surface": "",
+			"enviorment": ""
 		},
 		"casualties": {
 			"total": {
-				"killed":0,
-				"injured":0
+				"killed": 0,
+				"injured": 0
 			},
 			"pedestrians": {
-				"killed":0,
-				"injured":0
+				"killed": 0,
+				"injured": 0
 			}
 		},
-		"posted_speed":"",
-		"total_vehicles":0,
+		"posted_speed": "",
+		"total_vehicles": 0,
 		"alcohol":true,
 		"cell_phone":true
 	}
 }
+
+
