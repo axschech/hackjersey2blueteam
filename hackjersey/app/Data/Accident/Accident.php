@@ -1,6 +1,6 @@
 <?php
 
-namespace Accident;
+namespace App\Data\Accident;
 
 class Accident extends Eloquent {
 
