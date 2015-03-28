@@ -1,0 +1,9 @@
+<?php
+
+namespace Accident
+
+class Accident extends Model {
+
+	
+
+}

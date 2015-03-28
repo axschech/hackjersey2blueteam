@@ -1,0 +1,39 @@
+{
+	"Accident": {
+		"case_number":0,
+		"time": {
+			"datetime":"2015/12/01 24:12:12"
+		},
+		"location": {
+			"county":0,
+			"municipality":0,
+			"county_name": "",
+			"municipality_name":"",
+			"latitude": 0,
+			"longitude": 0,
+			"address": {
+				"streetnumber":"",
+				"streetname":"",
+				"city":"",
+				"state":"",
+				"zipcode":0
+			}
+		},
+		"condition": {
+			"surface":"",
+			"enviorment":""
+		},
+		"deaths": {
+			"killed":0,
+			"injured":0,
+			"pedestrians": {
+				"killed":0,
+				"injured"
+			}
+		},
+		"posted_speed":"",
+		"total_vehicles":0,
+		"alcohol":true,
+		"cell_phone":true
+	}
+}
