@@ -1,0 +1,11 @@
+{
+	"Driver": {
+		"location": {
+			"city":"",
+			"state":""
+		},
+		"date_of_birth": "YYYY/MM/DD",
+		"sex":"",
+		"charge":""
+	}
+}
