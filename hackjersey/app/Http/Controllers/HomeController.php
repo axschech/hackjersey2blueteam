@@ -36,11 +36,16 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+		$str = "GET: /overview";
+		$str.= "parameters: limit, offset";
+		$str.= "<br />";
+		$str.= "GET: /details/:case_number";
+		return $str;
 	}
 
 	public function overview() 
 	{
+		$total = 
 		$offset = \Request::get('offset');
 		$limit = \Request::get('limit');
 		if(empty($limit)) {
@@ -55,7 +60,8 @@ class HomeController extends Controller {
 										'Latitude',
 										'Longitude',
 										'CountyName',
-										'MunicipalityName'
+										'MunicipalityName',
+										'CrashLocation'
 										)->limit($limit);
 		if(!empty($offset)) {
 			$query->offset($offset);
