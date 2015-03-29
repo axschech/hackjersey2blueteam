@@ -4,5 +4,5 @@
 
 # Hack Jersey 2.0
 
-## [App Link](http://dev.axschech.com/hj2/app)
+## [App Link](http://dev.axschech.com/hj2/a)
 
