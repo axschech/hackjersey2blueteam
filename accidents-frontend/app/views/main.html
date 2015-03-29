@@ -1,5 +1,10 @@
 <div ng-controller="AccidentsCtrl">  
-  <p><strong>Page:</strong> {{tableParams.page()}}
+  <h1>New Jersey Automobile Crash Data (2001 - 2013) </h1>
+  </br>
+  </br>
+  </br>
+  <h2>The Data!</h2>
+  <p><strong>Page:</strong> {{tableParams.page()}} of 198,127 (3,962,536 records)
   <table ng-table="tableParams" template-pagination="custom/pager" class="table">
         <tr ng-repeat="accident in $data">
             <td data-title="'Case Number'">
@@ -26,10 +31,23 @@
 
         </ul>
     </script>
-
-<iframe src="http://130.68.167.130:5601/#/visualize/edit/bycounty?embed&_g=()&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:CountyName,order:desc,orderBy:'2',size:19),schema:segment,type:terms),(id:'2',params:(),schema:metric,type:count)),listeners:(),params:(addLegend:!t,addTooltip:!t,defaultYExtents:!f,mode:stacked,shareYAxis:!t,spyPerPage:10),type:histogram))" height="600" width="800"></iframe>
-
-<iframe src="http://130.68.167.130:5601/#/visualize/create?embed&type=line&indexPattern=*&_g=()&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(),schema:metric,type:count),(id:'2',params:(field:CrashDayOfWeek,order:desc,orderBy:'1',size:7),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTooltip:!t,defaultYExtents:!f,shareYAxis:!t),type:line))" height="600" width="800"></iframe>
-
+</br>
+</br>
+<h2>Data Visualizations!</h2>
+<iframe src="http://130.68.167.130:5601/#/dashboard/dash?embed&_g=()&_a=(filters:!(),panels:!((col:1,id:bycounty,row:1,size_x:8,size_y:4,type:visualization),(col:1,id:dayoftheweek,row:5,size_x:7,size_y:4,type:visualization),(col:8,id:daysoftheweekalcohol,row:5,size_x:5,size_y:4,type:visualization),(col:9,id:total-killed,row:1,size_x:4,size_y:4,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'*')),title:dash)" height="600" width="1140"></iframe>
+</br>
+</br>
+<h2>Statisitics and Interesting Findings!</h2>
+  <ul>
+    <li>Total of 3,962,536 crash records</li>
+    <li>12 years worth of data (2001 - 2013)</li>
+    <li>Top crash location is Route 22 (9.3%)</li>
+    <li>Most crashes were in 25mph speed zones (29.4%)</li>
+    <li>Top responding police department is Somerville (18.4%)</li>
+    <li>74.9% of crashes involved two vehicles</li>
+    <li>Mile marker 71.3 on the NJ Turnpike was the most dangerous mile marker, possibly due to a 40 car pile up on February 10, 2015.</li>
+  </ul>
 </div>
+
+
 

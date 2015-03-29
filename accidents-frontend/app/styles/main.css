@@ -9,6 +9,10 @@
   max-width: none !important;
 }
 
+ul li{
+  font-size: 18px;
+}
+
 iframe{
   margin: 0 auto;
   display: block;
