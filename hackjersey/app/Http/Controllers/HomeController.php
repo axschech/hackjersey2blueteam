@@ -17,6 +17,8 @@ class HomeController extends Controller {
 	|
 	*/
 
+	public $headers = ['Access-Control-Allow-Origin', '*'];
+
 	/**
 	 * Create a new controller instance.
 	 *
@@ -59,14 +61,14 @@ class HomeController extends Controller {
 			$query->offset($offset);
 		}
 		$data = $query->get();
-		return response($data,200);
+		return response($data,200)->header($this->headers[0],$this->headers[1]);;
 	}
 
 	public function details($case_number)
 	{
 		$data = \Data\Accident\Accident::where('CaseNumber', $case_number)->first();
 		if($data) {
-			return response($data, 200);
+			return response($data, 200)->header($this->headers[0],$this->headers[1]);
 		} else {
 			return response('', 404);
 		}
