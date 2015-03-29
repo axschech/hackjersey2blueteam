@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-	echo "hey!";
-});
-
+Route::get('/', 'HomeController@index');
 Route::get('overview', 'HomeController@overview');
 Route::get('details/{case_number}','HomeController@details');
 
