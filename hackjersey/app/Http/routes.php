@@ -11,11 +11,10 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', function () {
+	echo "hey!";
+});
 
-Route::get('home', 'HomeController@index');
+Route::get('overview', 'HomeController@overview');
+Route::get('details/{case_number}','HomeController@details');
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
