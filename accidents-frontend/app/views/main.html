@@ -1,0 +1,35 @@
+<div ng-controller="AccidentsCtrl">  
+  <p><strong>Page:</strong> {{tableParams.page()}}
+  <table ng-table="tableParams" template-pagination="custom/pager" class="table">
+        <tr ng-repeat="accident in $data">
+            <td data-title="'Case Number'">
+                <a ng-href="/#/{{accident.CaseNumber}}">{{accident.CaseNumber}}</a>
+            </td>
+            <td data-title="'Date'">
+                {{accident.CrashDate}} | {{accident.CrashTime}}
+            </td>
+            <td data-title="'Address'">
+                {{accident.MunicipalityName}}
+                {{accident.CountyName}}
+            </td>
+        </tr> 
+  </table>
+
+  <script type="text/ng-template" id="custom/pager">
+        <ul class="pager ng-cloak">
+          <li ng-repeat="page in pages"
+                ng-class="{'disabled': !page.active, 'previous': page.type == 'prev', 'next': page.type == 'next'}"
+                ng-show="page.type == 'prev' || page.type == 'next'" ng-switch="page.type">
+            <a ng-switch-when="prev" ng-click="params.page(page.number)" href="">&laquo; Previous</a>
+            <a ng-switch-when="next" ng-click="params.page(page.number)" href="">Next &raquo;</a>
+          </li>
+
+        </ul>
+    </script>
+
+<iframe src="http://130.68.167.130:5601/#/visualize/edit/bycounty?embed&_g=()&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(field:CountyName,order:desc,orderBy:'2',size:19),schema:segment,type:terms),(id:'2',params:(),schema:metric,type:count)),listeners:(),params:(addLegend:!t,addTooltip:!t,defaultYExtents:!f,mode:stacked,shareYAxis:!t,spyPerPage:10),type:histogram))" height="600" width="800"></iframe>
+
+<iframe src="http://130.68.167.130:5601/#/visualize/create?embed&type=line&indexPattern=*&_g=()&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),vis:(aggs:!((id:'1',params:(),schema:metric,type:count),(id:'2',params:(field:CrashDayOfWeek,order:desc,orderBy:'1',size:7),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTooltip:!t,defaultYExtents:!f,shareYAxis:!t),type:line))" height="600" width="800"></iframe>
+
+</div>
+

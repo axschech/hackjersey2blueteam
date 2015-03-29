@@ -1,0 +1,41 @@
+<div ng-controller="AccidentCtrl">  
+
+  <img class="staticmap" src="https://maps.googleapis.com/maps/api/staticmap?center={{accident.CrashLocation}},NJ&zoom=14&size=400x400">
+
+  <table ng-table class="table">
+        <tr>
+            <td data-title="'Case Number'">
+                {{accident.CaseNumber}}
+            </td>
+            <td data-title="'Date / Time'">
+                {{accident.CrashDate}} / {{accident.CrashTime}}
+            </td>
+            <td data-title="'County'">
+                {{accident.CountyName}}
+            </td>
+             <td data-title="'Municipality'">
+                {{accident.MunicipalityName}}
+            </td>
+            <td data-title="'Police Department'">
+                {{accident.PoliceDepartment}}
+            </td>
+            <td data-title="'Address'">
+                {{accident.CrashLocation}}
+            </td>
+            <td data-title="'Condition'">
+                {{accident.EnvironmentalCondition}}
+            </td>
+            <td data-title="'Posted Seed'">
+                {{accident.PostedSpeed}} mph
+            </td>
+            <td data-title="'Alcohol Involved'">
+                {{accident.AlcoholInvolved}} 
+            </td>
+            <td data-title="'Cell Phone Involved'">
+                {{accident.CellPhoneInUseFlag}} 
+            </td>
+
+        </tr> 
+  </table>
+</div>
+
